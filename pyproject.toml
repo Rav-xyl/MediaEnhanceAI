@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediaenhanceai"
+version = "0.2.0"
+description = "AI-powered audio and video enhancement toolkit with GUI and CLI interfaces."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "MediaEnhanceAI" }]
+requires-python = ">=3.9"
+keywords = ["audio", "video", "enhancement", "noise-reduction", "upscaling"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+    "Topic :: Multimedia :: Video :: Conversion",
+]
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.9",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "noisereduce>=3.0",
+    "pydub>=0.25",
+    "opencv-python>=4.8",
+    "customtkinter>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/MediaEnhanceAI"
+Documentation = "https://github.com/yourusername/MediaEnhanceAI#readme"
+
+[project.scripts]
+mediaenhance-gui = "run_gui:main"
+mediaenhance-audio = "audio_enhancer.cli:main"
+mediaenhance-video = "video_enhancer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["audio_enhancer", "video_enhancer"]
