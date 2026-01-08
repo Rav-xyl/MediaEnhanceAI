@@ -43,8 +43,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/MediaEnhanceAI"
-Documentation = "https://github.com/yourusername/MediaEnhanceAI#readme"
+Homepage = "https://github.com/Rav-xyl/MediaEnhanceAI/"
+Documentation = "https://github.com/Rav-xyl/MediaEnhanceAI#readme"
 
 [project.scripts]
 mediaenhance-gui = "run_gui:main"
